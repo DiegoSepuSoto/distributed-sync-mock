@@ -30,6 +30,7 @@ func main() {
 	e.HideBanner = true
 	e.Use(middleware.CORS())
 	e.Use(middleware.Recover())
+	e.Use(middleware.Logger())
 
 	e.GET("/range", assignIDsRange)
 
@@ -56,7 +57,7 @@ func assignIDsRange(c echo.Context) error {
 		rangeToUse = addRange()
 	}
 
-	fmt.Println("sending range: ", rangeToUse)
+	log.Println("sending range: ", rangeToUse)
 
 	return c.JSON(http.StatusOK, echo.Map{"rangeIDs": rangeToUse})
 }
