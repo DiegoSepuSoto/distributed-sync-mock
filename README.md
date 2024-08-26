@@ -11,8 +11,7 @@ of a tool like [Zookeeper](https://zookeeper.apache.org/)
 First: clone the repository:
 
 ```bash
-git clone https://github.com/DiegoSepuSoto/distributed-sync-mock
-cd distributed-sync-mock
+git clone https://github.com/DiegoSepuSoto/distributed-sync-mock && cd distributed-sync-mock
 ```
 
 Then, download the dependencies
